@@ -48,19 +48,19 @@ body {font-family: "Lato", sans-serif}
 
   <!-- Automatic Slideshow Images -->
   <div class="mySlides w3-display-container w3-center w3-animate-right">  
-    <h1 class="w3-jumbo w3-animate-left"><font color="black">Welcome {{ players.online }}</font></h1>
+    <h1 class="w3-jumbo w3-animate-left"><font color="black">Welcome <div class="counter_total" id="totalPlayerCount"></div></font></h1>
     <img src="images/nature-hd-background-10.jpg" style="width:100%">
     <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
     </div>
    </div>
     <div class="mySlides w3-display-container w3-center w3-animate-right">
-       <h1 class="w3-jumbo w3-animate-left"><font color="black">Welcome {{ players.online }}</font></h1>
+       <h1 class="w3-jumbo w3-animate-left"><font color="black">Welcome <div class="counter_total" id="totalPlayerCount"></div></font></h1>
     <img src="images/2.jpg" style="width:100%">
     <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
     </div>
   </div>
    <div class="mySlides w3-display-container w3-center w3-animate-right">
-      <h1 class="w3-jumbo w3-animate-left"><font color="black">Welcome {{ players.online }}</font></h1>
+      <h1 class="w3-jumbo w3-animate-left"><font color="black">Welcome <div class="counter_total" id="totalPlayerCount"></div></font></h1>
     <img src="images/3.jpg" style="width:100%">
     <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
     </div>
@@ -175,7 +175,19 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
-
+<script>
+function D32updateServerCount() {
+    $.getJSON("https://mcapi.ca/query/play.minesuperior.com:25565/players", function (jsonBlob) {
+        $.each(jsonBlob, function (key, value) {
+            var D32countValueArray = value.toString();
+            var D32countString = "";
+            for(var i = 0; i < D32countValueArray.length; i++) {
+                D32countString += "<div class='counterDigit' style='margin-right:3px;'>" + D32countValueArray.charAt(i) + "</div>";
+            }
+            $(".counter_" + key).html(D32countString);
+        });
+    });
+}
 </script>
 
 </body>
