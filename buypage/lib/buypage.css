@@ -33,12 +33,12 @@ body {
 		}
 		
 		.panel.price .list-group-item:last-child {
-			border-bottom-right-radius: 20px;
-			border-bottom-left-radius: 20px;
+			border-bottom-right-radius: 0px;
+			border-bottom-left-radius: 0px;
 		}
 		.panel.price .list-group-item:first-child {
-			border-top-right-radius: 20px;
-			border-top-left-radius: 20px;
+			border-top-right-radius: 0px;
+			border-top-left-radius: 0px;
 		}
 		
 		.price .panel-footer {
