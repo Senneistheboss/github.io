@@ -33,43 +33,75 @@
       padding-top: 70px;
       padding-bottom: 70px;
   }
+    .navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 5px;
+}
+
+.navbar-nav li a:hover {
+    color: #1abc9c !important;
+}
   </style>
 </head>
 <body>
+  <nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#status">Status</a></li>
+        <li><a href="#staff">Staff</a></li>
+        <li><a href="#vote">Vote</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
  <!-- Begin Welcome -->
-<div class="container-fluid bg-1 text-center">
+<div class="container-fluid bg-1 text-center" id="home">
   <h3>Welcome</h3>
   <h3>Extra Info Here</h3>
 </div>
    <!-- End Welcome -->
    <!-- Begin Status -->
-<div class="container-fluid bg-2 text-center">
+<div class="container-fluid bg-2 text-center" id="status">
   <h3>Status of server</h3>
   <p>There are currently <span class="w3-text-black" data-playercounter-ip="mc.hypixel.net" data-playercounter-format="{online}/{max}">0</span> online.</p>
   <p>The server is currently <span class="w3-text-black" data-playercounter-ip="mc.hypixel.net" data-playercounter-status>online</span></p>
 </div>
    <!-- End Status -->
    <!-- Begin staff -->
-<div class="container-fluid bg-3 text-center">    
+<div class="container-fluid bg-3 text-center" id="staff">    
   <h3 class="margin">Staff</h3><br>
   <div class="row">
     <div class="col-sm-4">
       <p>Owner - NAME HERE </p>
-      <img src="https://crafatar.com/avatars/970c2480-bc75-447e-aa52-e166f3b7d754" class="img-rounded img-responsive margin" style="width:100%" alt="Image">
+      <img src="https://crafatar.com/avatars/970c2480-bc75-447e-aa52-e166f3b7d754" class="img-rounded img-responsive margin" style="width:70%" alt="Image">
     </div>
     <div class="col-sm-4"> 
       <p>Admin - NAME HERE </p>
-      <img src="https://crafatar.com/avatars/970c2480-bc75-447e-aa52-e166f3b7d754" class="img-rounded img-responsive margin" style="width:100%" alt="Image">
+      <img src="https://crafatar.com/avatars/970c2480-bc75-447e-aa52-e166f3b7d754" class="img-rounded img-responsive margin" style="width:70%" alt="Image">
     </div>
     <div class="col-sm-4"> 
       <p>Builder - NAME HERE </p>
-      <img src="https://crafatar.com/avatars/970c2480-bc75-447e-aa52-e166f3b7d754" class="img-rounded img-responsive margin" style="width:100%" alt="Image">
+      <img src="https://crafatar.com/avatars/970c2480-bc75-447e-aa52-e166f3b7d754" class="img-rounded img-responsive margin" style="width:70%" alt="Image">
     </div>
   </div>
 </div>
    <!-- end staff -->
    <!-- Begin Vote -->
-  <div class="container-fluid bg-4 text-center">
+  <div class="container-fluid bg-4 text-center" id="vote">
     <h3 class="w3-wide">VOTE</h3>
     <p class="w3-justify text-center">Get items,money,...
     </p>
